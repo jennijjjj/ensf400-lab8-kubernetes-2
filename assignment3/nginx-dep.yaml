@@ -20,10 +20,11 @@ spec:
         volumeMounts:
         - name: nginx-config
           mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.cfg
       volumes:
       - name: nginx-config
         configMap:
           name: nginx-configmap
           items:
           - key: nginx.cfg
-            path: nginx.conf
+            path: nginx.cfg
