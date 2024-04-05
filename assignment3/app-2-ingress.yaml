@@ -6,6 +6,8 @@ metadata:
     nginx.ingress.kubernetes.io/canary: "true"
     nginx.ingress.kubernetes.io/canary-by-header: "app-2-canary"
     nginx.ingress.kubernetes.io/canary-weight-percent: "30"
+  labels:
+    app: app-2
 spec:
   rules:
   - http:
@@ -17,4 +19,3 @@ spec:
             name: app-2-service
             port:
               number: 8080
-  ingressClassName: nginx-ingress
